@@ -1,0 +1,18 @@
+Version: 1.0.0
+Date: 2024-03-19
+Description: Initial stable version with working hydration fix
+Changes:
+- Fixed hydration warnings by implementing ClientLayout component
+- Combined shop routes to handle both brand and category cases
+- Implemented proper Next.js 13+ App Router patterns
+- Added suppressHydrationWarning to handle browser extension attributes
+
+Files modified:
+- app/layout.tsx
+- app/components/ClientLayout.tsx
+- app/shop/[type]/page.tsx
+
+To restore this version:
+1. Copy all files from this directory back to their original locations
+2. Ensure all dependencies are installed
+3. Run 'npm run dev' to start the development server 
