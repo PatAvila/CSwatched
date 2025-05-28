@@ -1,14 +1,13 @@
-import Layout from "@/components/layout/Layout"
-import { Button } from "@/components/ui/button"
+import { Button } from "../components/ui/button"
 import { Camera, Droplet, Sun, Gift, Sparkles, Eye, Scissors, Brush, Smile } from "lucide-react"
 import Link from "next/link"
-import CallToActionScan from "@/components/ui/CallToActionScan"
+import CallToActionScan from "../components/ui/CallToActionScan"
 import { useMemo } from "react"
 import SafeImage from "./components/SafeImage"
-import CategoryLink from "@/components/CategoryLink"
-import BrandLink from "@/components/BrandLink"
-import PromoCard from "@/components/PromoCard"
-import TestimonialCard from "@/components/TestimonialCard"
+import CategoryLink from "./components/CategoryLink"
+import BrandLink from "./components/BrandLink"
+import PromoCard from "./components/PromoCard"
+import TestimonialCard from "./components/TestimonialCard"
 
 const peach = "#FBE7DD";
 const peachDark = "#E7BFA7";
@@ -81,7 +80,7 @@ export default function LandingPage() {
   const trendingBrands = useMemo(() => shuffle(allBrands), [])
 
   return (
-    <Layout>
+    <>
       {/* Hero Section */}
       <section className="relative bg-neutral-100">
         <div className="container px-4 py-12 mx-auto md:py-20">
@@ -231,6 +230,6 @@ export default function LandingPage() {
           <CallToActionScan />
         </div>
       </section>
-    </Layout>
+    </>
   )
 }

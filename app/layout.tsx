@@ -1,9 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import ClientLayout from './components/ClientLayout'
-import Header from './components/Header'
-import NavBar from './components/NavBar'
-import AnnouncementBar from './components/AnnouncementBar'
 
 export const metadata: Metadata = {
   title: 'v0 App',
@@ -19,12 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
-        <ClientLayout>
-          <AnnouncementBar />
-          <Header />
-          <NavBar />
-          {children}
-        </ClientLayout>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   )
