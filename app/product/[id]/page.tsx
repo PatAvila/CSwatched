@@ -1,4 +1,3 @@
-import Layout from "@/components/layout/Layout"
 import ProductCard from "@/components/ui/ProductCard"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -67,25 +66,25 @@ export default function ProductPage({ params }: ProductPageProps) {
   ]
 
   return (
-    <Layout>
+    <>
       <div className="container px-4 py-8 mx-auto">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* Product Images */}
           <div>
-            <div className="overflow-hidden bg-gray-100 rounded-lg aspect-square">
+            <div className="overflow-hidden bg-gray-100 rounded-lg aspect-square max-w-[100px] mx-auto">
               <img
                 src={product.images[0] || "/placeholder.svg"}
                 alt={product.name}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full p-2"
               />
             </div>
-            <div className="grid grid-cols-3 gap-2 mt-2">
+            <div className="grid grid-cols-3 gap-2 mt-2 max-w-[100px] mx-auto">
               {product.images.map((image, index) => (
                 <div key={index} className="overflow-hidden bg-gray-100 rounded-md aspect-square">
                   <img
                     src={image || "/placeholder.svg"}
                     alt={`${product.name} view ${index + 1}`}
-                    className="object-cover w-full h-full"
+                    className="object-cover w-full h-full p-1"
                   />
                 </div>
               ))}
@@ -207,7 +206,7 @@ export default function ProductPage({ params }: ProductPageProps) {
         {/* Complete the Look */}
         <div className="mt-16">
           <h2 className="text-2xl font-bold text-gray-900">Complete the Look</h2>
-          <div className="grid grid-cols-2 gap-4 mt-6 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 mt-6 md:grid-cols-4 lg:grid-cols-8">
             {completeTheLook.map((product) => (
               <ProductCard
                 key={product.id}
@@ -221,6 +220,6 @@ export default function ProductPage({ params }: ProductPageProps) {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }

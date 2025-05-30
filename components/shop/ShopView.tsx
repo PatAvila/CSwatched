@@ -124,6 +124,36 @@ const featuredBrands = [
     name: "Charlotte Tilbury",
     logo: "/placeholder.svg?height=200&width=200&text=CT&fontsize=18&textcolor=%23d946ef&bgcolor=%23fdf2f8",
   },
+  {
+    id: "4",
+    name: "NARS",
+    logo: "/placeholder.svg?height=200&width=200&text=NARS&fontsize=18&textcolor=%23d946ef&bgcolor=%23fdf2f8",
+  },
+  {
+    id: "5",
+    name: "Glossier",
+    logo: "/placeholder.svg?height=200&width=200&text=Glossier&fontsize=18&textcolor=%23d946ef&bgcolor=%23fdf2f8",
+  },
+  {
+    id: "6",
+    name: "Armani Beauty",
+    logo: "/placeholder.svg?height=200&width=200&text=Armani&fontsize=18&textcolor=%23d946ef&bgcolor=%23fdf2f8",
+  },
+  {
+    id: "7",
+    name: "Estée Lauder",
+    logo: "/placeholder.svg?height=200&width=200&text=Estee&fontsize=18&textcolor=%23d946ef&bgcolor=%23fdf2f8",
+  },
+  {
+    id: "8",
+    name: "Dior",
+    logo: "/placeholder.svg?height=200&width=200&text=Dior&fontsize=18&textcolor=%23d946ef&bgcolor=%23fdf2f8",
+  },
+  {
+    id: "9",
+    name: "Chanel",
+    logo: "/placeholder.svg?height=200&width=200&text=Chanel&fontsize=18&textcolor=%23d946ef&bgcolor=%23fdf2f8",
+  },
 ];
 
 export default function ShopView({ initialType = "All" }: ShopViewProps) {
@@ -163,7 +193,7 @@ export default function ShopView({ initialType = "All" }: ShopViewProps) {
         </div>
       </div>
       {/* Product Type Multi-Select Buttons */}
-      <div className="flex flex-wrap gap-2 mb-8">
+      <div className="flex flex-wrap gap-2 mb-8 justify-center">
         {productTypes.map((type) => (
           <button
             key={type.name}
@@ -190,7 +220,7 @@ export default function ShopView({ initialType = "All" }: ShopViewProps) {
         {/* Main Content */}
         <div className="lg:w-3/4">
           {/* Product Grid */}
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-8">
             {filteredProducts.map((product) => (
               <ProductCard
                 key={product.id}
@@ -209,7 +239,7 @@ export default function ShopView({ initialType = "All" }: ShopViewProps) {
           {/* Brand Spotlight */}
           <div className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900">Brand Spotlight</h2>
-            <div className="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-3">
+            <div className="flex flex-row gap-4 mt-6 overflow-x-auto">
               {featuredBrands.map((brand) => (
                 <BrandCard key={brand.id} id={brand.id} name={brand.name} logo={brand.logo} />
               ))}

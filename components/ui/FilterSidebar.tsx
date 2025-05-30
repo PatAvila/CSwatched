@@ -24,7 +24,7 @@ export default function FilterSidebar({ productType }: FilterSidebarProps) {
   };
 
   return (
-    <div className="w-full lg:w-64 bg-white p-4 rounded-md border">
+    <div className="w-full lg:w-80 bg-white p-4 rounded-md border">
       <div className="space-y-6">
         {/* Color Family */}
         <div>

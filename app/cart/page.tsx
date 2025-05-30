@@ -1,4 +1,3 @@
-import Layout from "@/components/layout/Layout"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Minus, Plus, X, ShoppingBag, ArrowRight } from "lucide-react"
@@ -77,7 +76,7 @@ export default function CartPage() {
   ]
 
   return (
-    <Layout>
+    <>
       <div className="container px-4 py-8 mx-auto">
         <h1 className="text-3xl font-bold text-gray-900">Your Shopping Bag</h1>
 
@@ -211,7 +210,7 @@ export default function CartPage() {
         {cartItems.length > 0 && (
           <div className="mt-16">
             <h2 className="text-2xl font-bold text-gray-900">You Might Also Like</h2>
-            <div className="grid grid-cols-2 gap-4 mt-6 md:grid-cols-4">
+            <div className="grid grid-cols-2 gap-4 mt-6 md:grid-cols-4 lg:grid-cols-8">
               {recommendedProducts.map((product) => (
                 <ProductCard
                   key={product.id}
@@ -226,6 +225,6 @@ export default function CartPage() {
           </div>
         )}
       </div>
-    </Layout>
+    </>
   )
 }

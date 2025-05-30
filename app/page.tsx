@@ -92,7 +92,7 @@ export default function LandingPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Button asChild className="bg-pink-600 hover:bg-pink-700 text-lg px-6 py-3">
-                  <Link href="/scan">
+                  <Link href="/scan?modal=open">
                     <Camera className="mr-2 h-5 w-5" /> Facial Scan
                   </Link>
                 </Button>
@@ -151,7 +151,7 @@ export default function LandingPage() {
                 ))}
               </ol>
               <Button asChild className="bg-[#E38CB7] hover:bg-pink-500 text-white rounded-full px-6 py-2 text-base font-semibold">
-                <Link href="/scan">Start Face Scan</Link>
+                <Link href="/scan?modal=open">Start Face Scan</Link>
               </Button>
             </div>
             <div className="flex justify-center">
