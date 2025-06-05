@@ -3,13 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Heart, Share2, Star, Camera } from "lucide-react"
 
-interface ProductPageProps {
-  params: {
-    id: string
-  }
-}
-
-export default function ProductPage({ params }: ProductPageProps) {
+export default function ProductPage({ params }: { params: { id: string } }) {
   // Mock product data
   const product = {
     id: params.id,

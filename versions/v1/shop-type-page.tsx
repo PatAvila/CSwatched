@@ -5,13 +5,7 @@ import CallToActionScan from "@/components/ui/CallToActionScan"
 import { Button } from "@/components/ui/button"
 import { ChevronDown } from "lucide-react"
 
-interface ShopPageProps {
-  params: {
-    type: string
-  }
-}
-
-export default function ShopPage({ params }: ShopPageProps) {
+export default function ShopPage({ params }: { params: { type: string } }) {
   const typeName = params.type.charAt(0).toUpperCase() + params.type.slice(1).replace("-", " ")
   const isBrand = !["foundation", "concealer", "powder", "blush", "highlighter", "lips"].includes(params.type.toLowerCase())
 
