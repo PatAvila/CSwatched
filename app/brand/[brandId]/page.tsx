@@ -5,13 +5,7 @@ import NewArrivalsCarousel from '@/components/brand/NewArrivalsCarousel';
 import AllProductsList from '@/components/brand/AllProductsList';
 import RecentlyViewedItemsList from '@/components/brand/RecentlyViewedItemsList';
 
-interface BrandPageProps {
-  params: {
-    brandId: string;
-  };
-}
-
-export default function BrandPage({ params }: BrandPageProps) {
+export default function BrandPage({ params }: { params: { brandId: string } }) {
   // Example: use params.brandId for fetching brand data
   return (
     <div>
